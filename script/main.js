@@ -12,6 +12,7 @@ document.addEventListener('keyup', function(event){
     const displayShowKey = document.getElementById('display-show-key').innerText;
    if(displayShowKey==pressedKey){
     console.log('matched');
+    continueGame();
    }else{
     console.log('not matched');
    }

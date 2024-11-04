@@ -21,3 +21,19 @@ function makeheightLightKey (elementId){
     element.classList.add('bg-orange-400')
 
 }
+
+function removeKeyHighLight(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.remove('bg-orange-400');
+}
+
+function continueGame (){
+    const previousAlphabet = document.getElementById('display-show-key').innerText;
+    removeKeyHighLight(previousAlphabet);
+    const alphabet = getRandomAlphabet();
+    const currentAlphabet = document.getElementById('display-show-key');
+    currentAlphabet.innerText= alphabet;
+    makeheightLightKey(alphabet);
+
+
+}

@@ -37,3 +37,11 @@ function continueGame (){
 
 
 }
+
+function scoreUpId(elementId){
+    const element = document.getElementById(elementId);
+    const finalScore= parseInt(element.innerText) + 1;
+    console.log(finalScore);
+    element.innerText=finalScore;
+  
+}

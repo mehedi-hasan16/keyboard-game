@@ -11,11 +11,13 @@ document.addEventListener('keyup', function(event){
     const pressedKey = event.key;
     const displayShowKey = document.getElementById('display-show-key').innerText;
    if(displayShowKey==pressedKey){
-    console.log('matched');
     scoreUpId('score');
     continueGame();
    }else{
-    console.log('not matched');
+    hideElementById('second-page');
+    showElementById('last-page');
+    const finalScore= document.getElementById('final-score');
+    finalScore.innerText= document.getElementById('score').innerText;
    }
 
 })
